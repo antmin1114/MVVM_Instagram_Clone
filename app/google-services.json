@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "81806318417",
+    "project_id": "mvvmkistagram",
+    "storage_bucket": "mvvmkistagram.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81806318417:android:e51f8f1fb67739304dd170",
+        "android_client_info": {
+          "package_name": "com.kkm.mvvmkistagram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81806318417-c84g9n26i96db70pf40nod3u0bu99rbg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvufvZe8oNzrNE9afb8LNiqxFq1GXsyP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81806318417-c84g9n26i96db70pf40nod3u0bu99rbg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
