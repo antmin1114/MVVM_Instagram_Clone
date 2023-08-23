@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "81806318417-c84g9n26i96db70pf40nod3u0bu99rbg.apps.googleusercontent.com",
+          "client_id": "81806318417-8afo2chhs6at3ogm4ecshvgus46gkm2l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kkm.mvvmkistagram",
+            "certificate_hash": "86e92b1e17e672f0d8e12197914f60b97ad1a3a8"
+          }
+        },
+        {
+          "client_id": "81806318417-3n43oeu7r2l6hisr9djjkta9eil1gg11.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,7 +35,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "81806318417-c84g9n26i96db70pf40nod3u0bu99rbg.apps.googleusercontent.com",
+              "client_id": "81806318417-3n43oeu7r2l6hisr9djjkta9eil1gg11.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

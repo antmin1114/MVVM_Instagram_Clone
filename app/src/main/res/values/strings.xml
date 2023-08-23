@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">MvvmKistagram</string>
-    <string name="facebook_app_id">397161661812167</string>
-    <string name="fb_login_protocol_scheme">fb397161661812167</string>
+    <string name="facebook_app_id">743169090850769</string>
+    <string name="fb_login_protocol_scheme">fbb89c4a7de18fa6695d866cdac10345ea</string>
+    <string name="facebook_client_token">b89c4a7de18fa6695d866cdac10345ea</string>
 
     <!-- Sign In -->
     <string name="email">Email</string>
@@ -59,4 +60,6 @@
     <!-- etc -->
     <item name="visible" type="id" />
     <item name="masked" type="id" />
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
