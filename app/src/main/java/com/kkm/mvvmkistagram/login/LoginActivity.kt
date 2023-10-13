@@ -29,6 +29,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var callbackManager: CallbackManager
     val TAG = "LoginActivity-facebook"
     val loginViewModel : LoginViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
