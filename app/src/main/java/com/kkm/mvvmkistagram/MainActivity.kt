@@ -23,18 +23,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_MEDIA_IMAGES), REQUEST_CODE)
-        binding.bottomNavigation.setOnNavigationItemSelectedListener {
+
+        var f = DetailViewFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.main_content, f).commit()
+
+        binding.bottomNavigation.setOnItemSelectedListener {
 
             when (it.itemId) {
                 R.id.action_home -> {
                     var f = DetailViewFragment()
                     supportFragmentManager.beginTransaction().replace(R.id.main_content, f).commit()
-                    return@setOnNavigationItemSelectedListener true
+                    true
                 }
                 R.id.action_search -> {
                     var f = GridFragment()
                     supportFragmentManager.beginTransaction().replace(R.id.main_content, f).commit()
-                    return@setOnNavigationItemSelectedListener true
+                    true
                 }
                 R.id.action_add_photo -> {
                     if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_IMAGES) == PackageManager.PERMISSION_GRANTED) {
@@ -43,21 +47,21 @@ class MainActivity : AppCompatActivity() {
                     } else {
                         Toast.makeText(this, "권한 허용이 안됨", Toast.LENGTH_LONG).show()
                     }
-                    return@setOnNavigationItemSelectedListener true
+                    true
                 }
 
                 R.id.action_favorite_alarm -> {
                     var f = AlarmFragment()
                     supportFragmentManager.beginTransaction().replace(R.id.main_content, f).commit()
-                    return@setOnNavigationItemSelectedListener true
+                    true
                 }
                 R.id.action_account -> {
                     var f = UserFragment()
                     supportFragmentManager.beginTransaction().replace(R.id.main_content, f).commit()
-                    return@setOnNavigationItemSelectedListener true
+                    true
                 }
             }
-            return@setOnNavigationItemSelectedListener false
+            false
 
         }
     }

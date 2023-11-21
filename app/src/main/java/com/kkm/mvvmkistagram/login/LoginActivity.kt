@@ -1,6 +1,5 @@
 package com.kkm.mvvmkistagram.login
 
-import android.Manifest
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +7,6 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
 import androidx.databinding.DataBindingUtil
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
@@ -27,7 +25,7 @@ import java.util.Arrays
 class LoginActivity : AppCompatActivity() {
     lateinit var binding : ActivityLoginBinding
     lateinit var callbackManager: CallbackManager
-    val TAG = "LoginActivity-facebook"
+    val TAG = "LoginActivity"
     val loginViewModel : LoginViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,6 +45,7 @@ class LoginActivity : AppCompatActivity() {
         loginManager.loginBehavior = LoginBehavior.WEB_ONLY
         loginManager.logInWithReadPermissions(this, Arrays.asList("email"))
         loginManager.registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
+
             override fun onCancel() {
 
                 Log.d(TAG, "onCancel: 취소됌")
@@ -70,7 +69,7 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    fun setObserve() {
+    private fun setObserve() {
 
         loginViewModel.showInputNumberActivity.observe(this) {
 
@@ -131,8 +130,6 @@ class LoginActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         callbackManager.onActivityResult(requestCode, resultCode, data)
-
-
 
     }
 

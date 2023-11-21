@@ -35,7 +35,6 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
     var showToastMessage : MutableLiveData<String> = MutableLiveData()
 
     val context = getApplication<Application>().applicationContext
-
     var googleSignInClient : GoogleSignInClient
 
     init {
@@ -67,7 +66,7 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
 
     }
 
-    fun loginEmail() {
+    private fun loginEmail() {
 
         auth.signInWithEmailAndPassword(id.value.toString(), password.value.toString()).addOnCompleteListener {
             Log.d("success-result", "id: ${id.value.toString()}\npassword: ${password.value.toString()}")
